@@ -20,6 +20,7 @@
   (rainbow-delimiters-mode t)
   (fic-ext-mode t)
   (linum-mode t)
+  (eldoc-mode t)
   )
 
 ;; Prog mode Hooks

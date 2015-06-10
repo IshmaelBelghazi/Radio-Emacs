@@ -6,7 +6,7 @@
 (require 'auto-complete-config)
 (setq ac-quick-help-prefer-pos-tip t)
 
-(defun radio-text-modes-setup ()
+(defun radio-ac-text-modes-setup ()
   "Radio Emacs auto-complete text modes setup"
   (setq ac-sources '(ac-source-files-in-current-dir
 		     ac-source-filename
@@ -25,9 +25,9 @@
 
 (defun radio-ac-prog-modes-setup ()
   "Radio Emacs auto-complete prog modes setup"
-  (setq ac-sources '(ac-source-dictionary
+  (setq ac-sources '(ac-source-files-in-current-dir
 		     ac-source-filename
-		     ac-source-files-in-current-dir
+		     ac-source-dictionary
 		     ac-source-yasnippet
 		     )))
 

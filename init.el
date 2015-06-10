@@ -17,12 +17,15 @@
 (add-to-list 'el-get-recipe-path "~/.emacs.d/radio/recipes")
 ;; Adding User personal recipes
 (add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
-(el-get 'sync)
-;; Paths
 ;; Adding Emacs Radio elisps paths
 (add-to-list 'load-path "~/.emacs.d/radio/elisp")
 ;; Adding personal elisp to path
 (add-to-list 'load-path "~/.emacs.d/personal")
+(require 'radio-packages)
+(el-get 'sync radio-packages)
+(el-get 'sync)
+;; Paths
+
 ;; Misc
 ;; No startup messages
 (setq inhibit-startup-message t)
@@ -30,6 +33,10 @@
 ;; ** General
 ;; *** Common
 (require 'radio-common)
+;; *** Helm
+(require 'radio-helm)
+;; *** git
+(require 'radio-git)
 ;; *** Auto-complete
 (require 'radio-ac)
 ;; *** Company
@@ -50,12 +57,19 @@
 ;; ** Prog
 ;; *** Common
 (require 'radio-prog-common)
+;; *** General
+;; **** CEDET
+;;(require 'radio-cedet)
+;; **** TAGS
+(require 'radio-tags)
 ;; *** Language Specific
 ;; **** Elisp
 ;; **** R
 (require 'radio-R)
 ;; **** Python
 (require 'radio-python)
+;; **** Matlab
+(require 'radio-matlab)
 ;; **** C
 (require 'radio-C)
 ;; **** C++
@@ -63,6 +77,8 @@
 ;; **** Web
 ;; **** CSS
 ;; **** Javascript
-
+;; * Loading Helper functions
+(require 'helper-fun)
 (provide 'init)
 ;;; init.el ends here
+(put 'erase-buffer 'disabled nil)
