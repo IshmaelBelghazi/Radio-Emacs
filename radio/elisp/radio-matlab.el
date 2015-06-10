@@ -29,7 +29,6 @@
   "Radio Emacs Matlab Mode Hooks"
   (radio-prog-mode-hooks)
   (semantic-mode t)
-  (semanticdb-enable-ectags 'matlab-mode)
   (matlab-cedet-setup)
   (radio-ac-matlab-mode-setup)
   (auto-complete-mode t)
