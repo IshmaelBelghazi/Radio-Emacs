@@ -10,6 +10,7 @@
   "Radio Emacs C mode hooks"
   (ac-clang-async-c-setup)
   )
+
 (add-hook 'c-mode-common-hook (lambda ()
 				(radio-c-mode-hook)
 				))
