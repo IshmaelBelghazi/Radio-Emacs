@@ -24,6 +24,7 @@
 
 ;; Prog mode Hooks
 (add-hook 'prog-mode-hook (lambda()
+			    (radio-ac-prog-modes-setup)
 			    (radio-prog-mode-hooks)
 			    ))
 

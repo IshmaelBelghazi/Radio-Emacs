@@ -4,6 +4,31 @@
 ;; Auto-complete
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
 (require 'auto-complete-config)
-(ac-config-default)
 (setq ac-quick-help-prefer-pos-tip t)
+
+(defun radio-text-modes-setup ()
+  "Radio Emacs text mode setup"
+  (setq 'ac-sources '(ac-source-files-in-current-dir
+		      ac-source-filename
+		      ac-source-dictionary
+		      ac-source-words-in-buffer
+		      ac-source-yasnippet)))
+
+(defun radio-ac-tex-modes-setup ()
+  "Radio Emacs auto-complete tex mode setup"
+  (setq 'ac-sources '(ac-source-files-in-current-dir
+		      ac-source-filename
+		      ac-source-dictionary
+		      ac-source-words-in-buffer
+		      ac-source-yasnippet
+		      )))
+
+(defun radio-ac-prog-modes-setup ()
+  "Radio Emacs auto-complete prog mode setup"
+  (setq 'ac-sources '(ac-source-dictionary
+		      ac-source-filename
+		      ac-source-files-in-current-dir)))
+
+
+
 (provide 'radio-ac)

@@ -1,0 +1,1 @@
+(provide 'radio-text-common)
