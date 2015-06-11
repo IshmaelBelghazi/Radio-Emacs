@@ -27,7 +27,7 @@
 (add-to-list 'load-path "~/.emacs.d/personal")
 (require 'radio-packages)
 (el-get 'sync radio-packages)
-(el-get 'sync)
+;;(el-get 'sync)
 ;; Paths
 
 ;; Misc
