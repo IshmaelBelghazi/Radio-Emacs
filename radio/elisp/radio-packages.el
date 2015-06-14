@@ -3,6 +3,7 @@
 	auto-complete-c-headers
 	auto-complete-rst
 ;;	cedet
+	c-eldoc
 	cl-lib
 	clang-complete-async
 	company-jedi
@@ -11,6 +12,7 @@
 	ctable
 	dash
 	deferred
+	doxymacs
 	drag-stuff
 	el-get
 	elpy
