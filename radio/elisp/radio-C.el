@@ -2,10 +2,10 @@
 (defun radio-ac-clang-async-c-setup ()
   "Radio Emacs Auto-Complete Clang Async Setup"  
   (setq ac-clang-complete-executable "~/.emacs.d/el-get/clang-complete-async/clang-complete")
-  (radio-get-system-clang-cflags)
-  (radio-get-pkg-config-cflags "libR")
   (add-to-list 'ac-sources 'ac-source-clang-async)
   (ac-clang-launch-completion-process)
+  (radio-get-system-clang-cflags)
+  (radio-get-pkg-config-cflags "libR")
   )
 
 ;; Clang Complete cflags
