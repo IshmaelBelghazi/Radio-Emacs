@@ -4,7 +4,7 @@
   (setq ac-clang-complete-executable "~/.emacs.d/el-get/clang-complete-async/clang-complete")
   (radio-get-system-clang-cflags)
   (radio-get-pkg-config-cflags "libR")
-  (add-to-list 'ac-sources '(ac-source-clang-async))
+  (add-to-list 'ac-sources 'ac-source-clang-async)
   (ac-clang-launch-completion-process)
   )
 
@@ -52,8 +52,8 @@
   (doxymacs-mode)
   )
 
-(add-hook 'c-mode-hook (lambda ()
-			 (radio-c-mode-hook)
-			 ))
+(add-hook 'c-mode-common-hook (lambda ()
+				(radio-c-mode-hook)
+				))
 
 (provide 'radio-C)
