@@ -41,6 +41,8 @@
 (require 'radio-helm)
 ;; *** git
 (require 'radio-git)
+;; *** Projectile
+(require 'radio-projectile)
 ;; *** Auto-complete
 (require 'radio-ac)
 ;; *** Company

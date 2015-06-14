@@ -44,6 +44,7 @@
 	popup
 	pos-tip
 	powerline
+	projectile
 	python-environment
 	pyvenv
 	r-autoyas
