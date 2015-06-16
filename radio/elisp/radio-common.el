@@ -13,7 +13,7 @@
 (setq framemove-hook-into-windmove t)
 ;; Dragstuff around
 (drag-stuff-global-mode t)
-(setq drag-stuff-modifier '(control shift)) 
+(setq drag-stuff-modifier '(control meta)) 
 ;; Popwin
 ;; Making annoying automatic buffers temporary. quit with "C-g"
 (require 'popwin)
