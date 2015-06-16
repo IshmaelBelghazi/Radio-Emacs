@@ -10,4 +10,7 @@
   (auto-complete-mode t)
   )
 
+(add-hook 'makefile-mode-hook (lambda ()
+				(radio-matlab-mode-hooks)
+				))
 (provide 'radio-makefile)
