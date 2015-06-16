@@ -5,6 +5,8 @@
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
 (require 'auto-complete-config)
 (setq ac-quick-help-prefer-pos-tip t)
+(setq ac-auto-show-menu 0.3)
+(setq ac-quick-help-delay 0.6)
 
 (defun radio-ac-text-modes-setup ()
   "Radio Emacs auto-complete text modes setup"
