@@ -13,5 +13,6 @@
 (setq framemove-hook-into-windmove t)
 ;; Dragstuff around
 (drag-stuff-global-mode t)
+(setq drag-stuff-modifier '(meta shift))
 
 (provide 'radio-common)
