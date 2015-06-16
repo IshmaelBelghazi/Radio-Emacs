@@ -45,6 +45,7 @@
 	pkg-info
 	polymode
 	popup
+	popwin
 	pos-tip
 	powerline
 	projectile
