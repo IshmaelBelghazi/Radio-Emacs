@@ -30,6 +30,7 @@
 	git-gutter
 	git-gutter-fringe
 	git-modes
+	google-c-style
 	helm
 	highlight-indentation
 	idomenu

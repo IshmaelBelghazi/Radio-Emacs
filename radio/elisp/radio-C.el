@@ -50,7 +50,10 @@
   (radio-ac-clang-async-c-setup)
   (radio-c-eldoc-setup)
   (doxymacs-mode)
-  )
+  ;; Google C-style
+  (google-c-style)
+  (google-make-newline-indent)
+ )
 
 (add-hook 'c-mode-common-hook (lambda ()
 				(radio-c-mode-hook)
