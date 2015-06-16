@@ -20,6 +20,7 @@
   (radio-ac-prog-modes-setup)
   (add-to-list 'ac-sources 'ac-source-semantic)
   (add-to-list 'ac-sources 'ac-source-semantic-raw)
+  (add-to-list 'ac-sources 'ac-source-dabbrev)
   (add-to-list 'ac-sources 'ac-source-gtags)
  
   )
@@ -33,6 +34,8 @@
   (radio-ac-matlab-mode-setup)
   (auto-complete-mode t)
   (mlint-minor-mode t)
+  (require 'semanticdb-matlab)
+  (require 'semantic-matlab)
   ;;(ggtags-mode t)
   )
 

@@ -1,5 +1,6 @@
 (setq radio-packages
-      '(auto-complete
+      '(ac-dabbrev
+	auto-complete
 	auto-complete-c-headers
 	auto-complete-rst
 ;;	cedet

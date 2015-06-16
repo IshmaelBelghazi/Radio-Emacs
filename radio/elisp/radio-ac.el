@@ -11,7 +11,7 @@
   (setq ac-sources '(ac-source-files-in-current-dir
 		     ac-source-filename
 		     ac-source-dictionary
-		     ac-source-words-in-buffer
+		     ac-source-dabbrev
 		     ac-source-yasnippet)))
 
 (defun radio-ac-tex-modes-setup ()
@@ -19,7 +19,7 @@
   (setq ac-sources '(ac-source-files-in-current-dir
 		     ac-source-filename
 		     ac-source-dictionary
-		     ac-source-words-in-buffer
+		     ac-source-dabbrev
 		     ac-source-yasnippet
 		     )))
 
