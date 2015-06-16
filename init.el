@@ -70,6 +70,8 @@
 (require 'radio-tags)
 ;; *** Language Specific
 ;; **** Elisp
+;; **** Makefile
+(require 'radio-makefile)
 ;; **** R
 (require 'radio-R)
 ;; **** Python
