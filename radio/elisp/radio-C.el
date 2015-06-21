@@ -22,6 +22,8 @@
   ;; Google C-style
   (google-set-c-style)
   (google-make-newline-indent)
+  ;; Doxymacs
+  (doxymacs-mode t)
  )
 
 (add-hook 'c-mode-hook (lambda ()
