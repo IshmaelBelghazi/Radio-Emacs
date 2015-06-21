@@ -11,6 +11,6 @@
   )
 
 (add-hook 'makefile-mode-hook (lambda ()
-				(radio-matlab-mode-hooks)
+				(radio-makefile-mode-hooks)
 				))
 (provide 'radio-makefile)

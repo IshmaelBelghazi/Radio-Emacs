@@ -23,6 +23,7 @@
 (global-set-key (kbd "<f6>") (lambda() (interactive) (find-file "~/.emacs.d/init.el")))
 ;; Toggles menu bar
 (global-set-key (kbd "C-<f11>") 'toggle-menu-bar-mode-from-frame)
-
+;; Disable scroll bar
+(setq scroll-bar-mode -1)
 
 (provide 'radio-common)

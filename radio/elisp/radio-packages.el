@@ -3,6 +3,7 @@
 	auto-complete
 	auto-complete-c-headers
 	auto-complete-rst
+	ac-irony
 ;;	cedet
 	c-eldoc
 	cl-lib
@@ -23,6 +24,7 @@
 	fic-ext-mode
 	find-file-in-project
 	flycheck
+	flycheck-irony
 	framemove
 	fringe-helper
 	fuzzy
@@ -32,9 +34,13 @@
 	git-modes
 	google-c-style
 	helm
+	helm-descbinds
+	helm-c-flycheck
 	highlight-indentation
 	idomenu
 	iedit
+	irony-mode
+	irony-eldoc
 	jedi
 	let-alist
 	magit
