@@ -16,6 +16,7 @@
 	deferred
 	doxymacs
 	drag-stuff
+	ede-compdb
 	el-get
 	elpy
 	epc

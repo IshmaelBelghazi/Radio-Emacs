@@ -25,5 +25,7 @@
 (global-set-key (kbd "C-<f11>") 'toggle-menu-bar-mode-from-frame)
 ;; Disable scroll bar
 (setq scroll-bar-mode -1)
+;; Global subword mode
+(global-subword-mode 1)
 
 (provide 'radio-common)

@@ -2,6 +2,19 @@
 (setq debug-on-error t)
 ;; El-get
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
+;; Loading CEDET
+;; Unloading Builtin cedet
+;;(setq load-path (remove-if (lambda (x) (string-match-p "cedet" x)) load-path))
+(load-file (concat user-emacs-directory "/el-get/cedet/cedet-remove-builtin.el"))
+;;(cedet-remove-builtin)
+;; Loading devel CEDET
+(load-file (concat user-emacs-directory "/el-get/cedet/cedet-devel-load.el"))
+(load-file (concat user-emacs-directory "/el-get/cedet/contrib/cedet-contrib-load.el"))
+(require 'semantic)
+(require 'ede)
+(global-semanticdb-minor-mode 1)
+(global-semantic-idle-scheduler-mode 1)
+
 
 (unless (require 'el-get nil 'noerror)
   (with-current-buffer
@@ -90,3 +103,15 @@
 (provide 'init)
 ;;; init.el ends here
 (put 'erase-buffer 'disabled nil)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(scroll-bar-mode nil))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
