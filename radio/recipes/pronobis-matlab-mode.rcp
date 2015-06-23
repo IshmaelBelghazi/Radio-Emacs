@@ -1,0 +1,5 @@
+(:name pronobis-matlab-mode
+       :description "Unofficial port of the CVS version of matlab-mode with fixes and new features."
+       :type github
+       :pkgname "pronobis/matlab-mode"
+       )

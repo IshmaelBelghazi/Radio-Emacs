@@ -4,7 +4,7 @@
 	auto-complete-c-headers
 	auto-complete-rst
 	ac-irony
-;;	cedet
+	cedet
 	c-eldoc
 	cl-lib
 	clang-complete-async
@@ -46,7 +46,7 @@
 	let-alist
 	magit
 	markdown-mode
-	matlab-mode
+	pronobis-matlab-mode
 	navi-mode
 	outorg
 	outshine
