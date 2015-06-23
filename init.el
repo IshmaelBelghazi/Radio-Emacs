@@ -2,18 +2,18 @@
 (setq debug-on-error t)
 ;; El-get
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
-;; Loading CEDET
-;; Unloading Builtin cedet
-;;(setq load-path (remove-if (lambda (x) (string-match-p "cedet" x)) load-path))
-(load-file (concat user-emacs-directory "/el-get/cedet/cedet-remove-builtin.el"))
-;;(cedet-remove-builtin)
-;; Loading devel CEDET
-(load-file (concat user-emacs-directory "/el-get/cedet/cedet-devel-load.el"))
-(load-file (concat user-emacs-directory "/el-get/cedet/contrib/cedet-contrib-load.el"))
-(require 'semantic)
-(require 'ede)
-(global-semanticdb-minor-mode 1)
-(global-semantic-idle-scheduler-mode 1)
+;; ;; Loading CEDET
+;; ;; Unloading Builtin cedet
+;; ;;(setq load-path (remove-if (lambda (x) (string-match-p "cedet" x)) load-path))
+;; (load-file (concat user-emacs-directory "/el-get/cedet/cedet-remove-builtin.el"))
+;; ;;(cedet-remove-builtin)
+;; ;; Loading devel CEDET
+;; (load-file (concat user-emacs-directory "/el-get/cedet/cedet-devel-load.el"))
+;; (load-file (concat user-emacs-directory "/el-get/cedet/contrib/cedet-contrib-load.el"))
+;; (require 'semantic)
+;; (require 'ede)
+;; (global-semanticdb-minor-mode 1)
+;; (global-semantic-idle-scheduler-mode 1)
 
 
 (unless (require 'el-get nil 'noerror)
