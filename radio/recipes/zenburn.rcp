@@ -1,4 +1,4 @@
 (:name zenburn
-       :description The Zenburn colour theme ported to Emacs
+       :description "The Zenburn colour theme ported to Emacs"
        :type github
        :pkgname "bbatsov/zenburn-emacs")
