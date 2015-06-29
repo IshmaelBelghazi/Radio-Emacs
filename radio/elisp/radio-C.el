@@ -58,7 +58,7 @@
   (ede-minor-mode 1)
   (semantic-mode 1)
   (require 'srefactor)
-  (define-key c-mode-map (kbd "C-S-RET") 'srefactor-refactor-at-point)
+  (define-key c-mode-map (kbd "C-M-RET") 'srefactor-refactor-at-point)
   ;; Find other file
   (define-key c-mode-map (kbd "C-f o") 'ff-find-other-file)
   
