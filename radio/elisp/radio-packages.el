@@ -64,6 +64,7 @@
 	rainbow-delimiters
 	rebox2
 	smartparens
+	srefactor
 	yascroll
 	yasnippet
 	zenburn))
