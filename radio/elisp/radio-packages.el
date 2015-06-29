@@ -48,6 +48,7 @@
 	markdown-mode
 	pronobis-matlab-mode
 	navi-mode
+	org-ac
 	outorg
 	outshine
 	pkg-info
