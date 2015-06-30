@@ -56,7 +56,12 @@
   ;;(add-to-list 'ac-sources 'ac-source-semantic-raw)
   (require 'ede-compdb)
   (ede-minor-mode 1)
-  ;;(semantic-mode 1)
+  (semantic-mode 1)
+  (require 'srefactor)
+  (define-key c-mode-map (kbd "C-M-RET") 'srefactor-refactor-at-point)
+  ;; Find other file
+  (define-key c-mode-map (kbd "C-f o") 'ff-find-other-file)
+  
  )
 
 (add-hook 'c-mode-hook (lambda ()

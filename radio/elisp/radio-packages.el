@@ -48,6 +48,7 @@
 	markdown-mode
 	pronobis-matlab-mode
 	navi-mode
+	org-ac
 	outorg
 	outshine
 	pkg-info
@@ -63,6 +64,7 @@
 	rainbow-delimiters
 	rebox2
 	smartparens
+	srefactor
 	yascroll
 	yasnippet
 	zenburn))
