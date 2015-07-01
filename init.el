@@ -3,6 +3,7 @@
 ;; El-get
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 ;; Loading CEDET
+<<<<<<< HEAD
 ;; ;; Unloading Builtin cedet
 ;; ;;(setq load-path (remove-if (lambda (x) (string-match-p "cedet" x)) load-path))
 ;; (load-file (concat user-emacs-directory "/el-get/cedet/cedet-remove-builtin.el"))
@@ -17,6 +18,24 @@
 ;; (global-semantic-idle-summary-mode 1)
 ;; ;;(global-semantic-idle-breadcrumbs-mode 1)
 ;; (semanticdb-enable-gnu-global-databases)
+=======
+;; Unloading Builtin cedet
+(require 'cl)
+
+(setq load-path (remove-if (lambda (x) (string-match-p "cedet" x)) load-path))
+;;(load-file (concat user-emacs-directory "/el-get/cedet/cedet-remove-builtin.el"))
+;;(cedet-remove-builtin)
+;; Loading devel CEDET
+(load-file (concat user-emacs-directory "/el-get/cedet/cedet-devel-load.el"))
+(load-file (concat user-emacs-directory "/el-get/cedet/contrib/cedet-contrib-load.el"))
+(require 'semantic)
+(require 'ede)
+(global-semanticdb-minor-mode 1)
+(global-semantic-idle-scheduler-mode 1)
+(global-semantic-idle-summary-mode 1)
+;;(global-semantic-idle-breadcrumbs-mode 1)
+(semanticdb-enable-gnu-global-databases t)
+>>>>>>> 184ecf36e9d721ab3ba53fd5a4ef9dc30588b956
 
 (unless (require 'el-get nil 'noerror)
   (with-current-buffer
@@ -105,4 +124,21 @@
 ;; * Loading Helper functions
 (require 'helper-fun)
 (provide 'init)
+<<<<<<< HEAD
 
+=======
+;;; init.el ends here
+(put 'erase-buffer 'disabled nil)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages (quote (srefactor))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+>>>>>>> 184ecf36e9d721ab3ba53fd5a4ef9dc30588b956
