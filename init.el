@@ -4,28 +4,11 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
-(package-initialize)
-
+;;(package-initialize)
+;; Debug on error
 (setq debug-on-error t)
 ;; El-get
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
-;; Loading CEDET
-;; Unloading Builtin cedet
-(require 'cl)
-
-(setq load-path (remove-if (lambda (x) (string-match-p "cedet" x)) load-path))
-;;(load-file (concat user-emacs-directory "/el-get/cedet/cedet-remove-builtin.el"))
-;;(cedet-remove-builtin)
-;; Loading devel CEDET
-(load-file (concat user-emacs-directory "/el-get/cedet/cedet-devel-load.el"))
-(load-file (concat user-emacs-directory "/el-get/cedet/contrib/cedet-contrib-load.el"))
-(require 'semantic)
-(require 'ede)
-(global-semanticdb-minor-mode 1)
-(global-semantic-idle-scheduler-mode 1)
-(global-semantic-idle-summary-mode 1)
-;;(global-semantic-idle-breadcrumbs-mode 1)
-(semanticdb-enable-gnu-global-databases t)
 
 (unless (require 'el-get nil 'noerror)
   (with-current-buffer

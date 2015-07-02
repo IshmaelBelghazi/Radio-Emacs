@@ -1,16 +1,16 @@
 (setq radio-packages
       '(ac-dabbrev
 	auto-complete
-	auto-complete-c-headers
 	auto-complete-rst
 	ac-irony
 	cedet
 	c-eldoc
 	cl-lib
 	clang-complete-async
+	company-c-headers
 	company-jedi
 	company-mode
-	company-quickhelp
+	company-quickhelp	
 	ctable
 	dash
 	deferred
@@ -25,7 +25,6 @@
 	fic-ext-mode
 	find-file-in-project
 	flycheck
-	flycheck-irony
 	framemove
 	fringe-helper
 	fuzzy
@@ -40,8 +39,6 @@
 	highlight-indentation
 	idomenu
 	iedit
-	irony-mode
-	irony-eldoc
 	jedi
 	let-alist
 	magit

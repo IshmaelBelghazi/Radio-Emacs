@@ -22,50 +22,34 @@
       (setq-local flycheck-clang-include-path (get-include-path comp t))
       )))
 
+;; EDE minor mode hooks
 (add-hook 'ede-compdb-project-rescan-hook #'flycheck-compdb-setup)
 (add-hook 'ede-minor-mode-hook #'flycheck-compdb-setup)
+(add-hook 'ede-minor-mode-hook (lambda ()
+				 (setq company-c-headers-path-system 'ede-object-system-include-path)))
 
 (defun radio-c-mode-hook ()
   "Radio Emacs C mode hooks"
-  ;; Irony Mode
-  (irony-mode)
-  (define-key irony-mode-map [remap completion-at-point]
-    'irony-completion-at-point-async)
-  (define-key irony-mode-map [remap complete-symbol]
-    'irony-completion-at-point-async)
-  (irony-cdb-autosetup-compile-options)
-  ;; Irony Flycheck
-  (eval-after-load 'flycheck
-    '(add-hook 'flycheck-mode-hook #'flycheck-irony-setup))
-  ;; Irony Auto-complete
-  (add-to-list 'ac-sources 'ac-source-irony)
-  (define-key irony-mode-map (kbd "M-RET") 'ac-complete-irony-async)
-  ;; Irony Flycheck
-  (eldoc-mode 1)
-  (irony-eldoc)
   ;; Google C-style
   (google-set-c-style)
   (google-make-newline-indent)
   ;; Doxymacs
   (doxymacs-mode 1)
-  ;; Semantic
-  ;;(semantic-gcc-setup)
-  ;;(require 'semantic/bovine/gcc)
-  ;;(require 'semantic/bovine/clang)
-  ;;(add-to-list 'ac-sources 'ac-source-semantic)
-  ;;(add-to-list 'ac-sources 'ac-source-semantic-raw)
   (require 'ede-compdb)
   (ede-minor-mode 1)
   (semantic-mode 1)
   (require 'srefactor)
   (define-key c-mode-map (kbd "C-f r") 'srefactor-refactor-at-point)
   ;; Find other file
-  (define-key c-mode-map (kbd "C-f o") 'ff-find-other-file)
-  
+  (define-key c-mode-map (kbd "C-f o") 'ff-find-other-file)  
  )
 
 (add-hook 'c-mode-hook (lambda ()
 			 (radio-c-mode-hook)
+			 (company-mode 1)
+			 (push 'company-c-headers company-backends)
+			 (push 'company-semantic company-backends)
+			 (push 'company-files company-backends)
 			 ))
 
 (provide 'radio-C)
