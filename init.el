@@ -87,6 +87,8 @@
 (require 'radio-tags)
 ;; *** Language Specific
 ;; **** Elisp
+;; **** Shell
+(require 'radio-shell)
 ;; **** Makefile
 (require 'radio-makefile)
 ;; **** R
