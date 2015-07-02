@@ -15,7 +15,8 @@
 (setq matlab-shell-command-switches '("-nodisplay" "-nosplash"))
 
 (add-hook 'matlab-mode-hook (lambda ()
-			      (semantic-mode t)
+			      (smartparens-mode 1)
+			      (semantic-mode 1)
 			      (require 'semantic-matlab)
 			      ;; Matlab cedet setup
 			      (matlab-cedet-setup)
