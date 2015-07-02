@@ -47,7 +47,7 @@
 (global-srecode-minor-mode 1)
 ;; EDE
 (global-ede-mode 1)
-(ede-enable-generic-projects)
+;(ede-enable-generic-projects)
 
 
 (provide 'radio-cedet)

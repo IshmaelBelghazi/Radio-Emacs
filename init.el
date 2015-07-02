@@ -7,6 +7,10 @@
 ;;(package-initialize)
 ;; Debug on error
 (setq debug-on-error t)
+;; CEDET
+(load-file (concat user-emacs-directory "/radio/elisp/radio-cedet.el"))
+(require 'radio-cedet)
+
 ;; El-get
 (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
