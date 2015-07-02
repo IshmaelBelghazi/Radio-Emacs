@@ -27,5 +27,7 @@
 (setq scroll-bar-mode -1)
 ;; Global subword mode
 (global-subword-mode 1)
+;; Enable erase buffer
+(put 'erase-buffer 'disabled nil)
 
 (provide 'radio-common)
