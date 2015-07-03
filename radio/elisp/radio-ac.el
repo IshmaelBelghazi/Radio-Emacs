@@ -4,7 +4,7 @@
 ;; Auto-complete
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
 (require 'auto-complete-config)
-(global-auto-complete-mode -1)
+;;(global-auto-complete-mode -1)
 (setq ac-quick-help-prefer-pos-tip 1)
 (setq ac-auto-show-menu 0.3)
 (setq ac-quick-help-delay 0.6)

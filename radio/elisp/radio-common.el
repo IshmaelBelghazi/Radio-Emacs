@@ -1,5 +1,7 @@
 ;; Fully redraw buffer
 (setq redisplay-dont-pause t)
+;; Disbaling Scroll bar
+(scroll-bar-mode -1)
 ;; Disbaling ToolBar
 (tool-bar-mode -1)
 ;; A better scroll bar

@@ -28,7 +28,8 @@
 						       company-keywords
 						       company-dabbrev))
 			      (ggtags-mode t)
-			      (eval-after-load 'flycheck
-				'(require 'flycheck-matlab-mlint))))
+;;			      (eval-after-load 'flycheck
+			      ;;				'(require 'flycheck-matlab-mlint))
+			      ))
 
 (provide 'radio-matlab)
