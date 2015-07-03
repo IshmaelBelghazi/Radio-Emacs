@@ -84,7 +84,7 @@
 ;; *** Language Specific
 ;; **** Elisp
 ;; **** Shell
-(require 'radio-shell)
+;;(require 'radio-shell)
 ;; **** Makefile
 (require 'radio-makefile)
 ;; **** R
