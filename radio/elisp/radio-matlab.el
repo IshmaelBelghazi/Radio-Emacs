@@ -10,10 +10,22 @@
   (split-string (shell-command-to-string command))
   )
 
+(defun radio-get-mlint-path ()
+  "Returns mlint path for flycheck in MATLAB mode"
+  (setq command "which mlint")
+  (replace-regexp-in-string "\n$" "" 
+			    (shell-command-to-string command))
+  )
+
 ;; install path
 (setq matlab-shell-command "matlab")
 (setq matlab-shell-command-switches '("-nodisplay" "-nosplash"))
-
+;; Mlint path
+;; (setq matlab-mlint "/usr/local/MATLAB/R2013a/bin/glnxa64/mlint")
+;; (setq mlint-program "/usr/local/MATLAB/R2013a/bin/glnxa64/mlint")
+;; (setq flycheck-matlab-mlint-executable "/usr/local/MATLAB/R2013a/bin/glnxa64/mlint")
+;; Hooks
+;; Matlab Mode
 (add-hook 'matlab-mode-hook (lambda ()
 			      (smartparens-mode 1)
 			      (semantic-mode 1)
@@ -28,8 +40,14 @@
 						       company-keywords
 						       company-dabbrev))
 			      (ggtags-mode t)
-;;			      (eval-after-load 'flycheck
-			      ;;				'(require 'flycheck-matlab-mlint))
+			      (eval-after-load 'flycheck
+				'(require 'flycheck-matlab-mlint))
 			      ))
+;; Matlab-shell mode hook
+(add-hook 'matlab-shell-mode-hook (lambda ()
+				    (smartparens-mode 1)
+				    (eldoc-mode 1)
+				    (company-mode 1)				    
+				    ))
 
 (provide 'radio-matlab)
