@@ -1,8 +1,10 @@
 (setq radio-packages
       '(ac-dabbrev
+	auctex
 	auto-complete
 	auto-complete-rst
 	ac-irony
+	cdlatex-mode
 	cedet
 	c-eldoc
 	cl-lib
@@ -21,7 +23,8 @@
 	elpy
 	epc
 	epl
-	ess
+	eshell-prompt-extras
+	ess	
 	fic-ext-mode
 	find-file-in-project
 	flycheck
@@ -46,6 +49,8 @@
 	pronobis-matlab-mode
 	navi-mode
 	org-ac
+	org-mobile-sync-git
+	org-mode
 	outorg
 	outshine
 	pkg-info
@@ -64,6 +69,7 @@
 	srefactor
 	yascroll
 	yasnippet
+	virtualenvwrapper
 	zenburn))
 
 (provide 'radio-packages)
