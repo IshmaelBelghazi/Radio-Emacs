@@ -15,6 +15,7 @@
 					    "sphinx.ext.ifconfig"
 					    "sphinx.ext.viewcode"
 					    "sphinx.ext.napoleon"
+					    "sphinxcontrib.matlab"
 					    ))
 
 (add-hook 'rst-mode-hook (lambda ()

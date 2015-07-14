@@ -48,6 +48,8 @@
 ;; ** General
 ;; *** Common
 (require 'radio-common)
+;; *** Evil mode
+(require 'radio-evil)
 ;; *** Helm
 (require 'radio-helm)
 ;; *** git
@@ -85,6 +87,8 @@
 ;; **** Elisp
 ;; **** Shell
 ;;(require 'radio-shell)
+;; **** Eshell
+(require 'radio-eshell)
 ;; **** Makefile
 (require 'radio-makefile)
 ;; **** R

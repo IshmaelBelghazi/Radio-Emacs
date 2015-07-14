@@ -9,8 +9,9 @@
 ;; Zenburn Theme
 (load-file "~/.emacs.d/el-get/zenburn/zenburn-theme.el")
 (load-theme 'zenburn t)
-;; Powerline Theme
-(powerline-default-theme)
+;; Powerline + Evil mode powerline
+
+
 ;; Move Between framebuffers
 (require 'framemove)
 (windmove-default-keybindings)

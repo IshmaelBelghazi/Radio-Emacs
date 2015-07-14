@@ -24,7 +24,8 @@
 	epc
 	epl
 	eshell-prompt-extras
-	ess	
+	ess
+	evil
 	fic-ext-mode
 	find-file-in-project
 	flycheck
@@ -59,6 +60,7 @@
 	popwin
 	pos-tip
 	powerline
+	powerline-evil
 	projectile
 	python-environment
 	pyvenv
