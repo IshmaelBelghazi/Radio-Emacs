@@ -9,6 +9,7 @@
 	c-eldoc
 	cl-lib
 	clang-complete-async
+	clean-aindent
 	company-c-headers
 	company-jedi
 	company-mode
@@ -25,14 +26,15 @@
 	epl
 	eshell-prompt-extras
 	ess
+	emacs-ycmd
 	evil
 	fic-ext-mode
 	find-file-in-project
 	flycheck
 	framemove
 	fringe-helper
+	function-args
 	fuzzy
-	ggtags
 	git-gutter
 	git-gutter-fringe
 	git-modes
@@ -40,6 +42,7 @@
 	helm
 	helm-descbinds
 	helm-c-flycheck
+	helm-gtags
 	highlight-indentation
 	idomenu
 	iedit
@@ -72,6 +75,7 @@
 	yascroll
 	yasnippet
 	virtualenvwrapper
+	ws-butler
 	zenburn))
 
 (provide 'radio-packages)
