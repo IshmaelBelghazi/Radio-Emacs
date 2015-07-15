@@ -1,3 +1,4 @@
+
 ;; C mode hooks
 (defun flycheck-compdb-setup ()
   (when (and ede-object (oref ede-object compilation))
@@ -28,6 +29,14 @@
 (add-hook 'ede-minor-mode-hook (lambda ()
 				 (setq company-c-headers-path-system 'ede-object-system-include-path)))
 
+;; GDB configuration
+(setq
+ ;; use gdb-many-windows by default
+ gdb-many-windows t
+ ;; Non-nil means display source file containing the main routine at startup
+ gdb-show-main t
+ )
+
 (defun radio-c-mode-hook ()
   "Radio Emacs C mode hooks"
   ;; Google C-style
@@ -35,21 +44,32 @@
   (google-make-newline-indent)
   ;; Doxymacs
   (doxymacs-mode 1)
-  (require 'ede-compdb)
-  (ede-minor-mode 1)
-  (semantic-mode 1)
+  ;; (require 'ede-compdb)
+  ;;(ede-minor-mode 1)
+  ;;(semantic-mode 1)
   (require 'srefactor)
   (define-key c-mode-map (kbd "C-f r") 'srefactor-refactor-at-point)
   ;; Find other file
-  (define-key c-mode-map (kbd "C-f o") 'ff-find-other-file)  
+  (define-key c-mode-map (kbd "C-f o") 'ff-find-other-file)
+  ;; Function args and moo-complete
+  (fa-config-default)
+  (define-key c-mode-map (kbd "<s-return>") 'company-complete)
+  (define-key c-mode-map [(control tab)] 'moo-complete)
+  (define-key c-mode-map (kbd "M-o") 'fa-show)
  )
-
+(require 'company-c-headers)
 (add-hook 'c-mode-hook (lambda ()
 			 (radio-c-mode-hook)
-			 (company-mode 1)
-			 (push 'company-c-headers company-backends)
-			 (push 'company-semantic company-backends)
-			 (push 'company-files company-backends)
+			 (auto-complete-mode 1)
+			 (setq ac-sources '(ac-source-semantic-raw
+			                  ac-source-yasnippet
+			                  ac-source-files-in-current-dir
+			                  ))
+			 ;;(company-mode 1)
+			 ;;(add-to-list 'company-c-headers-path-system "/usr/include")
+			 ;;(add-to-list 'company-c-headers-path-system (getenv "R_INCLUDE_DIR"))
+			 ;; White space butler mode
+			 (ws-butler-mode 1)
 			 ))
 
 (provide 'radio-C)
