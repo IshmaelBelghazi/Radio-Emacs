@@ -71,7 +71,7 @@
 	rainbow-delimiters
 	rebox2
 	smartparens
-	srefactor
+	srefactor-git
 	yascroll
 	yasnippet
 	virtualenvwrapper

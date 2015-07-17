@@ -22,6 +22,8 @@
 
 (semantic-mode 1)
 
+;; Enabling srecoder globally
+(global-srecode-minor-mode 1)
 ;; Semantic System includes
 ;;(semantic-add-system-include "/usr/include" 'c-mode)
 ;;(semantic-add-system-include (getenv "R_INCLUDE_DIR") 'c-mode)
