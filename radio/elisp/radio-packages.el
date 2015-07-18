@@ -9,6 +9,7 @@
 	c-eldoc
 	cl-lib
 	clang-complete-async
+	clean-aindent
 	company-c-headers
 	company-jedi
 	company-mode
@@ -31,8 +32,8 @@
 	flycheck
 	framemove
 	fringe-helper
+	function-args
 	fuzzy
-	ggtags
 	git-gutter
 	git-gutter-fringe
 	git-modes
@@ -40,6 +41,7 @@
 	helm
 	helm-descbinds
 	helm-c-flycheck
+	helm-gtags
 	highlight-indentation
 	idomenu
 	iedit
@@ -68,10 +70,11 @@
 	rainbow-delimiters
 	rebox2
 	smartparens
-	srefactor
+	srefactor-git
 	yascroll
 	yasnippet
 	virtualenvwrapper
+	ws-butler
 	zenburn))
 
 (provide 'radio-packages)

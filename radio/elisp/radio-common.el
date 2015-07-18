@@ -1,3 +1,5 @@
+;; Alias for yes or no
+(defalias 'yes-or-no-p 'y-or-n-p)
 ;; Fully redraw buffer
 (setq redisplay-dont-pause t)
 ;; Disbaling Scroll bar
@@ -11,7 +13,6 @@
 (load-theme 'zenburn t)
 ;; Powerline + Evil mode powerline
 
-
 ;; Move Between framebuffers
 (require 'framemove)
 (windmove-default-keybindings)
@@ -24,6 +25,12 @@
 (require 'popwin)
 (popwin-mode 1)
 (global-set-key (kbd "C-M-z") popwin:keymap)
+;; Compile command
+(global-set-key (kbd "<f5>") (lambda ()
+			       (interactive)
+;;			       (setq-local compilation-read-command nil)
+			       (call-interactively 'compile)
+			       ))
 ;; Open init.el when pressing <f6>
 (global-set-key (kbd "<f6>") (lambda() (interactive) (find-file "~/.emacs.d/init.el")))
 ;; Toggles menu bar

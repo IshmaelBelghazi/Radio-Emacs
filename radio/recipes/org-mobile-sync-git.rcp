@@ -1,0 +1,4 @@
+(:name org-mobile-sync-git
+       :description "Automatically push and pull changes to/from MobileOrg"
+       :type github
+       :pkgname "steckerhalter/org-mobile-sync")
