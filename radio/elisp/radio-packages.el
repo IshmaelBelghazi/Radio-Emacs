@@ -24,7 +24,7 @@
 	epc
 	epl
 	eshell-prompt-extras
-	ess
+;;	ess
 	evil
 	fic-ext-mode
 	find-file-in-project
@@ -50,7 +50,7 @@
 	pronobis-matlab-mode
 	navi-mode
 	org-ac
-	org-mobile-sync-git
+;;	org-mobile-sync-git
 	org-mode
 	outorg
 	outshine
