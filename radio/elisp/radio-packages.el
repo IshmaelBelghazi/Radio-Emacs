@@ -11,6 +11,7 @@
 	clang-complete-async
 	clean-aindent
 	company-c-headers
+	company-irony
 	company-jedi
 	company-mode
 	company-quickhelp	
@@ -26,6 +27,7 @@
 	epl
 	eshell-prompt-extras
 ;;	ess
+	etags-table
 	evil
 	fic-ext-mode
 	find-file-in-project
@@ -41,6 +43,7 @@
 	helm
 	helm-descbinds
 	helm-c-flycheck
+	helm-etags-plus
 	helm-gtags
 	highlight-indentation
 	idomenu

@@ -1,3 +1,6 @@
+;;;;;;;;;;;
+;; GTAGS ;;
+;;;;;;;;;;;
 (require 'helm-gtags)
 (setq
  helm-gtags-ignore-case t
@@ -19,7 +22,6 @@
 (add-hook 'c-mode-hook 'helm-gtags-mode)
 (add-hook 'c++-mode-hook 'helm-gtags-mode)
 (add-hook 'matlab-mode-hook 'helm-gtags-mode)
-(add-hook 'ess-mode-hook 'helm-gtags-mode)
 (add-hook 'java-mode-hook 'helm-gtags-mode)
 (add-hook 'asm-mode-hook 'helm-gtags-mode)
 
@@ -31,6 +33,19 @@
 (define-key helm-gtags-mode-map (kbd "C-c <") 'helm-gtags-previous-history)
 (define-key helm-gtags-mode-map (kbd "C-c >") 'helm-gtags-next-history)
 
+;;;;;;;;;;;
+;; ETAGS ;;
+;;;;;;;;;;;
+(require 'helm-etags+)
+;; Setting ETAGS tables
+(setq tags-table-list '("~/.etags/R/TAGS"))
+;; (add-hook 'helm-etags+-select-hook 'etags-table-recompute)
+;; (setq etags-table-alist
+;;       (list
+;;        '("/home/ishmael/Dropbox/gsoc/gsoc2015/bigoptim/R/.*\\.[R]$" "/home/ishmael/.etags/R/TAGS")
+;;        ;;        '("/home/me/Projects/bar/.*\\.py$" "/home/me/Projects/python/common/TAGS")
+;;        ;;        '(".*\\.[ch]$" "/usr/local/include/TAGS")
+;;         ))
 
 
 (provide 'radio-tags)

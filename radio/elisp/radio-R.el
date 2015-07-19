@@ -8,8 +8,11 @@
   "Set ess level custom key binding"
   (local-set-key (kbd "C-,") 'r-autoyas-expand)
   (local-set-key (kbd "M-C-,") 'ess-edit-indent-call-sophisticatedly)
+  ;; (local-set-key (kbd "M-.") 'helm-etags+-select)
+  ;; (local-set-key (kbd "M-*") 'helm-etags+-history)
+  ;; (local-set-key (kbd "M-,") 'helm-etags+-history-go-back)
+  ;; (local-set-key (kbd "M-/") 'helm-etags+-history-go-forward)  
   )
-
 ;; ESS dired
 (autoload 'ess-rdired "ess-rdired" "View *R* objects in a dired-like buffer." t)
 (setq ess-eval-visibly-p nil) ;; Otherwise buffers get too heavy and
